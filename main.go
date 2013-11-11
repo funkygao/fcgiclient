@@ -15,10 +15,10 @@ func showVersion() {
 func main() {
 	var (
 		script  = flag.String("s", "/mnt/htdocs/royal/public/index.php", "server script absolute file path")
-		uri     = flag.String("u", "/", "request uri")
+		uri     = flag.String("uri", "/", "request uri")
+		reqData = flag.String("d", "", "send data in a POST request in form of k=v&k1=v1")
 		host    = flag.String("h", "127.0.0.1", "fastcgi server host")
 		port    = flag.Int("p", 9000, "fastcgi server port")
-		reqData = flag.String("d", "", "send data in a POST request in form of k=v&k1=v1")
 		version = flag.Bool("version", false, "show version")
 	)
 	flag.Parse()
